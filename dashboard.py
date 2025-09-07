@@ -121,7 +121,8 @@ def revenue_trend(symbol: str, financials: pd.DataFrame):
     Instruksi:
     - Sumbu X adalah 'date', berformat tanggal bulan tahun
     - Sumbu Y adalah 'revenue'
-    - Buat agar plot bernuansa warna hitam
+    - Perlihatkan titik datanya dan buat agar plot bernuansa warna hitam
+    - Titik datanya berwarna putih dan line nya berwarna biru
     - PENTING: Simpan plot ke dalam variabel bernama `fig`. Contoh: `fig, ax = plt.subplots()`
 
 
