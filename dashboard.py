@@ -117,10 +117,11 @@ def revenue_trend(symbol: str, financials: pd.DataFrame):
 
     {data_sample}
 
-    Buat sebuah skrip Python menggunakan matplotlib untuk menghasilkan line plot. 
+    Buat sebuah skrip Python menggunakan plotly untuk menghasilkan line plot. 
     Instruksi:
-    - Sumbu X adalah 'date'
+    - Sumbu X adalah 'date', berformat tanggal bulan tahun
     - Sumbu Y adalah 'revenue'
+    - Buat agar plot bernuansa warna hitam
     - PENTING: Simpan plot ke dalam variabel bernama `fig`. Contoh: `fig, ax = plt.subplots()`
 
 
@@ -135,7 +136,7 @@ def revenue_trend(symbol: str, financials: pd.DataFrame):
     with st.expander("📊 Visualisasi Tren Pendapatan"):
         exec_locals = {}
         exec(code, {}, exec_locals)
-        st.pyplot(exec_locals["fig"])
+        st.plotly_chart(exec_locals["fig"])   # ganti dari st.pyplot ke st.plotly_chart
 
 
 def trend_analysis(financials: pd.DataFrame):
